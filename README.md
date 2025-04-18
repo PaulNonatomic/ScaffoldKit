@@ -264,4 +264,4 @@ Scaffold Kit will create the directories and files defined in the template at th
     }
   ]
 }
-(Note: For GUID: references in .asmdef content, you'll need to either hardcode known GUIDs or potentially develop a more advanced placeholder system if you need dynamic GUID lookups during generation.):ContributingPull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.Please make sure to update tests as appropriate.
+(Note: For GUID: references in .asmdef content, you'll need to either hardcode known GUIDs or potentially develop a more advanced placeholder system if you need dynamic GUID lookups during generation.)
