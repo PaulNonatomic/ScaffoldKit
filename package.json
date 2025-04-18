@@ -1,0 +1,23 @@
+{
+  "name": "com.nonatomic.scaffoldkit",
+  "displayName": "ScaffoldKit",
+  "version": "0.0.0",
+  "description": "ScaffoldKit: Generate Unity project structures instantly.",
+  "keywords": [
+    "Assembly",
+    "Template",
+    "unity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NonatomicTeam/AssemblyTemplate.git"
+  },
+  "author": {
+    "name": "Nonatomic",
+    "email": "paul@nonatomic.co.uk",
+    "url": "https://nonatomic.co.uk"
+  },
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.0.2"
+  }
+}
