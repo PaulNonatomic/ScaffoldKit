@@ -19,5 +19,12 @@
   },
   "dependencies": {
     "com.unity.nuget.newtonsoft-json": "3.0.2"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "Unity Package Scaffold",
+      "description": "A ScaffoldKit template for generating Unity packages.",
+      "path": "Samples~/ScaffoldKit/UnityPackage"
+    }
+  ]
 }

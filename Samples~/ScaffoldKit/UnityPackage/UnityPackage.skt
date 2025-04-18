@@ -1,0 +1,165 @@
+{
+  "templateName": "Unity Package Template",
+  "templateVersion": "1.0.0",
+  "subDirectories": [
+    {
+      "name": "Editor",
+      "subDirectories": [],
+      "files": [
+        {
+          "name": "{{Package Domain}}.editor",
+          "extension": "asmdef",
+          "content": {
+            "name": "{{Package Domain}}.editor",
+            "rootNamespace": "{{Package Namespace}}",
+            "references": [
+              "{{Package Domain}}.runtime"
+            ],
+            "includePlatforms": [
+              "Editor"
+            ],
+            "excludePlatforms": [],
+            "allowUnsafeCode": false,
+            "overrideReferences": true,
+            "precompiledReferences": [],
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "versionDefines": [],
+            "noEngineReferences": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "Runtime",
+      "subDirectories": [],
+      "files": [     
+        {
+          "name": "{{Package Domain}}.runtime",
+          "extension": "asmdef",
+          "content": {
+            "name": "{{Package Domain}}.runtime",
+            "rootNamespace": "{{Package Namespace}}",
+            "references": [],
+            "includePlatforms": [],
+            "excludePlatforms": [],
+            "allowUnsafeCode": false,
+            "overrideReferences": true,
+            "precompiledReferences": [],
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "versionDefines": [],
+            "noEngineReferences": false
+          }
+        }      
+      ]
+    },
+    {
+      "name": "Tests",
+      "subDirectories": [
+        {
+          "name": "EditMode",
+          "subDirectories": [],
+          "files": [
+            {
+              "name": "{{Package Domain}}.tests.editmode",
+              "extension": "asmdef",
+              "content": {
+                "name": "{{Package Domain}}.tests.editmode",
+                "rootNamespace": "",
+                "references": [
+                  "{{Package Domain}}.runtime"
+                ],
+                "includePlatforms": [
+                  "Editor"
+                ],
+                "excludePlatforms": [],
+                "allowUnsafeCode": false,
+                "overrideReferences": true,
+                "precompiledReferences": [
+                  "nunit.framework.dll"
+                ],
+                "autoReferenced": true,
+                "defineConstraints": [
+                  "UNITY_INCLUDE_TESTS"
+                ],
+                "versionDefines": [],
+                "noEngineReferences": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "PlayMode",
+          "subDirectories": [],
+          "files": [
+            {
+              "name": "{{Package Domain}}.tests.playmode",
+              "extension": "asmdef",
+              "content": {
+                "name": "{{Package Domain}}.tests.playmode",
+                "rootNamespace": "",
+                "references": [
+                  "{{Package Domain}}.runtime",
+                  "UnityEditor.TestRunner",
+                  "UnityEngine.TestRunner"
+                ],
+                "includePlatforms": [],
+                "excludePlatforms": [],
+                "allowUnsafeCode": false,
+                "overrideReferences": true,
+                "precompiledReferences": [
+                  "nunit.framework.dll"
+                ],
+                "autoReferenced": true,
+                "defineConstraints": [
+                  "UNITY_INCLUDE_TESTS"
+                ],
+                "versionDefines": [],
+                "noEngineReferences": false
+              }
+            }
+          ]
+        }
+      ],
+      "files": []
+    }
+  ],
+  "files": [
+    {
+      "name": "CHANGELOG",
+      "extension": "md",
+      "content": "# Change Log\r\n\r\n## [0.0.0] - DD/MM/YYYY\r\n- First commit"
+    },
+    {
+      "name": "package",
+      "extension": "json",
+      "content": {
+        "name": "{{Package Domain}}",
+        "version": "0.0.0",
+        "displayName": "{{Package Name}}",
+        "description": "{{Package Description}}",
+        "unity": "{{Min Unity Version}}",
+        "unityRelease": "1f1",
+        "documentationUrl": "{{Documentation Url}}",
+        "changelogUrl": "{{Changelog Url}}",
+        "dependencies": {
+          "com.unity.test-framework": "1.3.9"
+        },
+        "keywords": [],
+        "author": {
+          "name": "{{Package Authors Name}}",
+          "email": "{{Package Authors Email}}",
+          "url": "{{Package Authors Url}}"
+        },
+        "type": "{{Package Type}}",
+        "samples": []
+      }
+    },
+    {
+      "name": "README",
+      "extension": "md",
+      "content": "{{Package Name}}\r\r\n{{Package Description}}"
+    }
+  ]
+}
