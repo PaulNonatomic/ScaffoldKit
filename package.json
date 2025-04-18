@@ -1,7 +1,7 @@
 {
   "name": "com.nonatomic.scaffoldkit",
   "displayName": "ScaffoldKit",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "ScaffoldKit: Generate Unity project structures instantly.",
   "keywords": [
     "Assembly",
