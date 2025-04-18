@@ -1,10 +1,10 @@
 <div align=center>   
 
 <p align="center">
-  <img src="Readme~/logo.png" width="500" alt="ScaffoldKit Logo">
+  <img src="Readme~/logo.png" width="600" alt="ScaffoldKit Logo">
 </p>
 
-# ScaffoldKit: Generate Unity project structures instantly.
+# Generate Unity project structures instantly.
 
 Define reusable templates for any directory structure, including files, content, and placeholders, directly within Unity. Use ScaffoldKit to instantly generate consistent scaffolding for new features, packages, or projects, saving time and reducing setup errors.
 
