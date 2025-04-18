@@ -1,7 +1,7 @@
 <div align=center>   
 
 <p align="center">
-  <img src="Readme~/logo.png" width="250" alt="ScaffoldKit Logo">
+  <img src="Readme~/logo.png" width="500" alt="ScaffoldKit Logo">
 </p>
 
 # ScaffoldKit: Generate Unity project structures instantly.
