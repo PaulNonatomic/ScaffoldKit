@@ -24,6 +24,9 @@ To install Scaffold Kit in your Unity project, add the package from the git URL:
 
 Setting up consistent folder structures, assembly definitions, and basic scripts for new features or modules in Unity can be repetitive and error-prone. ScaffoldKit streamlines this process by allowing you to define **Scaffold Templates** (`.skt` files). These templates capture directory layouts, file contents, and use placeholders for customization. With a few clicks, you can generate complex structures anywhere in your project, ensuring consistency and accelerating development.
 
+![Unity_HCJacpl8dK](https://github.com/user-attachments/assets/fa98a29d-a976-47a2-9457-09036862e993)
+![Unity_sGZYTKKRY3](https://github.com/user-attachments/assets/ee7f37f0-5107-4a8e-a50f-6d7b33159e10)
+
 ## Features
 
 * **Create Templates from Scratch:** Define `.skt` templates manually or via a simple editor action.
