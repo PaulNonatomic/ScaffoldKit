@@ -1,6 +1,85 @@
 {
   "templateName": "Unity Package Template",
   "templateVersion": "1.0.0",
+  "placeholderDefinitions": [
+    {
+      "key": "Package Domain",
+      "label": "Package Domain",
+      "description": "Reverse domain name notation (e.g., com.mycompany.mypackage). Used for package ID and asmdef names.",
+      "defaultValue": "com.mycompany.newpackage",
+      "order": 1
+    },
+    {
+      "key": "Package Name",
+      "label": "Package Display Name",
+      "description": "User-friendly name shown in Unity Package Manager.",
+      "defaultValue": "New Unity Package",
+      "order": 5
+    },
+    {
+      "key": "Package Namespace",
+      "label": "Root Namespace",
+      "description": "Default C# root namespace for scripts (e.g., MyCompany.NewPackage).",
+      "defaultValue": "MyCompany.NewPackage",
+      "order": 10
+    },
+    {
+      "key": "Package Description",
+      "label": "Package Description",
+      "description": "Brief description of the package's purpose for the package.json.",
+      "defaultValue": "This package provides...",
+      "order": 15
+    },
+    {
+      "key": "Min Unity Version",
+      "label": "Minimum Unity Version",
+      "description": "Lowest Unity version supported (e.g., 2022.3).",
+      "defaultValue": "2022.3",
+      "order": 20
+    },
+    {
+      "key": "Package Authors Name",
+      "label": "Author Name",
+      "description": "Name of the package author or company.",
+      "defaultValue": "Your Name / Company",
+      "order": 30
+    },
+    {
+      "key": "Package Authors Email",
+      "label": "Author Email",
+      "description": "Contact email for the author (optional).",
+      "defaultValue": "",
+      "order": 35
+    },
+    {
+      "key": "Package Authors Url",
+      "label": "Author URL",
+      "description": "Website URL for the author (optional).",
+      "defaultValue": "",
+      "order": 40
+    },
+    {
+      "key": "Documentation Url",
+      "label": "Documentation URL",
+      "description": "Link to package documentation (optional).",
+      "defaultValue": "",
+      "order": 50
+    },
+    {
+      "key": "Changelog Url",
+      "label": "Changelog URL",
+      "description": "Link to external changelog (optional, uses CHANGELOG.md otherwise).",
+      "defaultValue": "",
+      "order": 55
+    },
+    {
+      "key": "Package Type",
+      "label": "Package Type",
+      "description": "Type of package (e.g., tool, library, template). Affects package.json.",
+      "defaultValue": "tool",
+      "order": 60
+    }
+  ],
   "subDirectories": [
     {
       "name": "Editor",
@@ -33,7 +112,7 @@
     {
       "name": "Runtime",
       "subDirectories": [],
-      "files": [     
+      "files": [
         {
           "name": "{{Package Domain}}.runtime",
           "extension": "asmdef",
@@ -51,7 +130,7 @@
             "versionDefines": [],
             "noEngineReferences": false
           }
-        }      
+        }
       ]
     },
     {
