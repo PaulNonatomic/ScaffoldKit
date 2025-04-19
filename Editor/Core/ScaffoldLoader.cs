@@ -41,6 +41,10 @@ namespace ScaffoldKit.Editor.Core
 				// Validate if this is a valid Scaffold file
 				if (parsedData != null && !string.IsNullOrEmpty(parsedData.TemplateName))
 				{
+					parsedData.PlaceholderDefinitions ??= new ();
+					parsedData.SubDirectories ??= new ();
+					parsedData.Files ??= new ();
+					
 					var sktFile = new ScaffoldFile
 					{
 						FileName = fileName,

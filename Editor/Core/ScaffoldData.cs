@@ -5,6 +5,28 @@ using System.Collections.Generic;
 
 namespace ScaffoldKit.Editor.Core
 {
+	/// <summary>
+	/// Defines the structure for specifying placeholder details in a .skt template.
+	/// </summary>
+	[Serializable]
+	public class PlaceholderDefinition
+	{
+		[JsonProperty("key", Required = Required.Always)]
+		public string Key;
+
+		[JsonProperty("label", Required = Required.Always)]
+		public string Label;
+
+		[JsonProperty("description")]
+		public string Description = "";
+
+		[JsonProperty("defaultValue")]
+		public string DefaultValue = ""; 
+
+		[JsonProperty("order")]
+		public int Order = int.MaxValue;
+	}
+	
 	[Serializable]
 	public class FileData
 	{
@@ -28,10 +50,9 @@ namespace ScaffoldKit.Editor.Core
 		public bool ContributesToNamespace;
 
 		[JsonProperty("subDirectories")]
-		public List<DirectoryData> SubDirectories;
+		public List<DirectoryData> SubDirectories = new();
 
-		[JsonProperty("files")]
-		public List<FileData> Files;
+		[JsonProperty("files")] public List<FileData> Files = new ();
 	}
 
 	[Serializable]
@@ -44,10 +65,13 @@ namespace ScaffoldKit.Editor.Core
 		public string TemplateVersion;
 
 		[JsonProperty("subDirectories")]
-		public List<DirectoryData> SubDirectories;
+		public List<DirectoryData> SubDirectories = new();
 
 		[JsonProperty("files")]
-		public List<FileData> Files;
+		public List<FileData> Files = new();
+		
+		[JsonProperty("placeholderDefinitions")]
+		public List<PlaceholderDefinition> PlaceholderDefinitions = new ();
 	}
 	
 	[Serializable]

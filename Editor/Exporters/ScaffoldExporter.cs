@@ -53,8 +53,9 @@ namespace ScaffoldKit.Editor.Exporters
 				{
 					TemplateName = $"{selectedFolderName} Contents",
 					TemplateVersion = "1.0.0",
-					SubDirectories = new List<DirectoryData>(),
-					Files = new List<FileData>()
+					SubDirectories = new (),
+					Files = new (),
+					PlaceholderDefinitions = new (),
 				};
 
 				// Process Files Directly Under Selected Folder

@@ -8,5 +8,4 @@ to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 - Added first skt sample file for generating new Unity Packages
 
 ## [0.0.0] - 2025-04-18
-
 - initial package setup
