@@ -1,4 +1,5 @@
-﻿
+﻿/* === ScaffoldWindowStyle.uss (Updated) === */
+
 .main-container {
     padding: 12px;
     flex-grow: 1;
@@ -7,8 +8,12 @@
 .logo {
     width: 100%;
     height: 50px;
+    /* Assuming background image is set elsewhere or via Resources.Load */
+    /* background-image: url('...'); */
     background-size: contain;
     background-repeat: no-repeat;
+    /* Add margin if needed */
+    margin-bottom: 5px;
 }
 
 .page-container {
@@ -20,12 +25,13 @@
 .line-break {
     border-bottom-width: 1px;
     border-bottom-color: rgba(255, 255, 255, 0.2);
+    height: 1px; /* Give it explicit height */
     flex-shrink: 0;
     margin-bottom: 5px;
     margin-top: 12px;
 }
 
-.title-label {
+.title-label { /* Not currently used in C# but keep if needed */
     font-size: 20px;
     -unity-font-style: bold;
     color: #E0E0E0;
@@ -52,9 +58,11 @@
     color: #BBB;
 }
 
+/* Style for the main template selection dropdown */
 .template-dropdown {
     width: 100%;
     margin-bottom: 5px;
+    /* Match text-field appearance */
     background-color: rgba(40, 40, 40, 0.8);
     border-color: rgba(80, 80, 80, 0.6);
     border-width: 1px;
@@ -63,7 +71,7 @@
 
 .placeholder-scrollview {
     min-height: 100px;
-    max-height: 300px;
+    max-height: 300px; /* Adjust as needed */
     flex-grow: 1;
     border-width: 1px;
     border-color: rgba(80, 80, 80, 0.4);
@@ -76,40 +84,47 @@
     padding: 8px;
 }
 
+/* Add bottom margin to separate fields */
 .placeholder-fields-container > .field-container {
     margin-bottom: 10px;
 }
 
+/* Container for Label + Input Field */
 .field-container {
     flex-direction: row;
-    align-items: center;
+    align-items: center; /* Vertically align label and input */
     min-height: 24px;
     width: 100%;
     max-width: 100%;
     flex-shrink: 0;
 }
 
+/* Label for TextFields and Dropdowns */
 .field-label {
-    width: 150px;
-    min-width: 150px;
+    width: 150px;       /* Fixed width for alignment */
+    min-width: 150px;   /* Prevent shrinking */
     -unity-text-align: middle-left;
-    flex-shrink: 0;
+    flex-shrink: 0;     /* Don't shrink */
     overflow: hidden;
-    padding-right: 5px;
+    padding-right: 5px; /* Space between label and input */
+    /* Optional: Add ellipsis if label is too long */
+    /* text-overflow: ellipsis; */
 }
 
+/* Input field for String type */
 .text-field {
-    flex-grow: 1;
+    flex-grow: 1;       /* Take remaining space */
     flex-shrink: 1;
-    width: auto;
+    width: auto;        /* Let flexbox handle width */
     min-width: 50px;
     background-color: rgba(40, 40, 40, 0.8);
     border-color: rgba(80, 80, 80, 0.6);
     border-width: 1px;
     border-radius: 3px;
-    overflow: hidden;
+    overflow: hidden; /* Prevent input text overflow */
 }
 
+/* Target the actual input part of the text field if needed */
 .text-field > .unity-base-field__input {
     max-width: 100%;
     width: 100%;
@@ -117,104 +132,202 @@
     text-overflow: ellipsis;
 }
 
+/* --- NEW: Styles for Boolean Toggle --- */
+.placeholder-toggle {
+    flex-grow: 1; /* Allow toggle to fill remaining space */
+    min-width: 50px;
+    /* The toggle includes its own label. We might need margin */
+    /* If alignment looks off, try adding margin-left: */
+    /* margin-left: 5px; */
+    /* Or adjust padding within the toggle's label element if accessible */
+    /* Align checkmark visually with other inputs */
+    padding-left: 5px; /* Add some padding */
+}
+
+/* --- NEW: Styles for Enum Dropdown --- */
+.placeholder-dropdown {
+    flex-grow: 1;       /* Take remaining space */
+    flex-shrink: 1;
+    width: auto;        /* Let flexbox handle width */
+    min-width: 50px;
+    /* Match text-field appearance */
+    background-color: rgba(40, 40, 40, 0.8);
+    border-color: rgba(80, 80, 80, 0.6);
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+
+/* --- Button Styles --- */
 .button-icon {
     width: 18px;
     height: 18px;
-    margin: 4px;
+    margin: 4px; /* Center icon visually */
 }
 
 .button-container {
     flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 0px;
+    justify-content: space-between; /* Space out buttons */
+    align-items: center; /* Align buttons vertically */
+    margin-top: 15px; /* Space above buttons */
     width: 100%;
     flex-shrink: 0;
 }
 
 .primary-btn {
-    background-color: #e1770a;
+    background-color: #e1770a; /* Orange */
     color: white;
     padding: 8px 16px;
     border-radius: 4px;
     font-size: 14px;
     -unity-font-style: bold;
     border-width: 0;
-    flex-grow: 1;
+    flex-grow: 1; /* Let generate button grow */
     flex-shrink: 1;
     margin-left: 4px;
     margin-right: 4px;
+    min-height: 30px; /* Ensure consistent height */
 }
 
 .primary-btn:hover {
-    background-color: #fe860b;
+    background-color: #fe860b; /* Lighter orange */
 }
 
 .primary-btn:active {
-    background-color: #fe860b;
+    background-color: #c86a09; /* Darker orange */
 }
 
+/* Common style for secondary buttons */
+.secondary-btn { /* Used for Back button */
+    background-color: #444;
+    color: white;
+    padding: 8px 8px; /* Adjust padding for icon */
+    border-radius: 4px;
+    font-size: 14px;
+    border-width: 0;
+    flex-grow: 0; /* Don't grow */
+    flex-shrink: 0; /* Don't shrink */
+    margin-left: 4px;
+    margin-right: 4px;
+    min-height: 30px; /* Ensure consistent height */
+    min-width: 40px; /* Ensure minimum width for icon */
+    align-items: center; /* Center icon */
+    justify-content: center; /* Center icon */
+}
+
+.secondary-btn:hover {
+    background-color: #555;
+}
+
+.secondary-btn:active {
+    background-color: #333;
+}
+
+/* Specific class for refresh button if needed, otherwise use secondary */
 .refresh-btn {
+    /* Inherits from .secondary-btn if applied in C# */
+    /* Or copy styles from .secondary-btn */
     background-color: #444;
     color: white;
-    padding: 8px 16px;
+    padding: 8px 8px;
     border-radius: 4px;
     font-size: 14px;
     border-width: 0;
     flex-grow: 0;
-    flex-shrink: 1;
+    flex-shrink: 0;
     margin-left: 4px;
     margin-right: 4px;
+    min-height: 30px;
+    min-width: 40px;
+    align-items: center;
+    justify-content: center;
 }
+.refresh-btn:hover { background-color: #555; }
+.refresh-btn:active { background-color: #333; }
 
+/* Specific class for back button if needed, otherwise use secondary */
 .back-btn {
+    /* Inherits from .secondary-btn if applied in C# */
+    /* Or copy styles from .secondary-btn */
     background-color: #444;
     color: white;
-    padding: 8px 16px;
+    padding: 8px 8px;
     border-radius: 4px;
     font-size: 14px;
     border-width: 0;
     flex-grow: 0;
-    flex-shrink: 1;
+    flex-shrink: 0;
     margin-left: 4px;
     margin-right: 4px;
+    min-height: 30px;
+    min-width: 40px;
+    align-items: center;
+    justify-content: center;
 }
+.back-btn:hover { background-color: #555; }
+.back-btn:active { background-color: #333; }
 
-.back-btn:hover {
-    background-color: #555;
-}
 
-.back-btn-btn:active {
-    background-color: #333;
-}
+/* --- Other UI States --- */
 
-.refresh-btn:hover {
-    background-color: #555;
-}
-
-.refresh-btn:active {
-    background-color: #333;
-}
-
-.info-label {
+.info-label { /* For messages like "No placeholders found" */
     font-size: 12px;
     color: #999;
     -unity-font-style: italic;
     -unity-text-align: middle-center;
     margin-top: 10px;
     margin-bottom: 5px;
+    width: 100%;
 }
 
-.template-dropdown:hover, .text-field:hover {
+/* Hover states for inputs */
+.template-dropdown:hover,
+.text-field:hover,
+.placeholder-dropdown:hover {
     border-color: rgba(100, 100, 100, 0.8);
 }
 
-.template-dropdown:focus, .text-field:focus {
-    border-color: #3584E4;
+/* Focus state for inputs */
+.template-dropdown:focus,
+.text-field:focus,
+.placeholder-dropdown:focus {
+    border-color: #3584E4; /* Unity blue */
 }
 
-.primary-button:disabled,
+/* Disabled states for all controls */
+.primary-btn:disabled,
+.secondary-btn:disabled, /* Covers back/refresh if class is used */
 .refresh-btn:disabled,
+.back-btn:disabled,
 .template-dropdown:disabled,
-.text-field:disabled {
+.text-field:disabled,
+.placeholder-toggle:disabled,
+.placeholder-dropdown:disabled {
     opacity: 0.5;
 }
+
+/* Validation Label Styles */
+.validation-label {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: normal; /* Allow wrapping */
+    display: none; /* Hidden by default */
+}
+
+.validation-label.error {
+    color: #FFCCCC; /* Light red text */
+    background-color: rgba(150, 0, 0, 0.4); /* Dark red background */
+    border: 1px solid rgba(255, 80, 80, 0.5);
+    display: flex; /* Show when class is added */
+}
+
+.validation-label.warning {
+    color: #FFFFAA; /* Light yellow text */
+    background-color: rgba(150, 150, 0, 0.4); /* Dark yellow background */
+    border: 1px solid rgba(255, 255, 80, 0.5);
+    display: flex; /* Show when class is added */
+}
+
