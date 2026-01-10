@@ -15,6 +15,19 @@ Define reusable templates for any directory structure, including files, content,
 
 </div>
 
+## Installation
+
+Add **Scaffold Kit** to your Unity project via Package Manager:
+
+1. Open **Window > Package Manager**
+2. Click **+** > **Add package from git URL**
+3. Enter:
+```
+https://www.pkglnk.dev/track/scaffoldkit.git
+```
+
+[![pkglnk](https://www.pkglnk.dev/badge/scaffoldkit.svg)](https://www.pkglnk.dev/pkg/scaffoldkit)
+
 ---
 
 ## Installation
