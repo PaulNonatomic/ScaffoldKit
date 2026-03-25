@@ -23,15 +23,15 @@ Add **Scaffold Kit** to your Unity project via Package Manager:
 2. Click **+** > **Add package from git URL**
 3. Enter:
 ```
-https://www.pkglnk.dev/track/scaffoldkit.git
+https://www.pkglnk.dev/scaffoldkit.git
 ```
 
-[![pkglnk](https://www.pkglnk.dev/badge/scaffoldkit.svg)](https://www.pkglnk.dev/pkg/scaffoldkit)
+[![pkglnk](https://www.pkglnk.dev/card/scaffoldkit.svg)](https://www.pkglnk.dev/pkg/scaffoldkit)
 
----
-
-## Installation
-To install Scaffold Kit in your Unity project, add the package from the git URL: `https://github.com/PaulNonatomic/ScaffoldKit.git` using the Unity package manager (`Window > Package Manager > + > Add package from git URL...`).
+## Support
+If you like my work then please consider showing your support by buying me a brew
+<br><br>
+<a href="https://www.buymeacoffee.com/nonatomic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Samples
 Example `.skt` templates, such as a standard Unity Package structure, are available for import via the **Samples** tab in the Unity Package Manager window after installing ScaffoldKit. These provide practical examples of template structure and placeholder definitions.
